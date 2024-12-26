@@ -16,7 +16,8 @@ class TaskViewModel @Inject constructor() : ViewModel() {
     }
 
     fun onTaskCreated(string: String) {
-        Log.i("TAG", "Tarea")
+        _showDialog.value = false
+        Log.i("TAG", "Rei ayanami piloto del eva 001: $string")
     }
 
     fun onShowDialog() {
