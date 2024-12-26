@@ -28,6 +28,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 hilt-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version = "1.5.3" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

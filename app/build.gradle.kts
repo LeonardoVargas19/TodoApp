@@ -61,4 +61,10 @@ dependencies {
     //DAGGER HILT
     implementation("com.google.dagger:hilt-android:2.54")
     kapt("com.google.dagger:hilt-compiler:2.54")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2") // Manejo del ciclo de vida
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2") // LiveData con coroutines
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.compose.runtime:runtime-livedata:1.5.3")
+
+
 }
