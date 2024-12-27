@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("org.jetbrains.kotlin.kapt")
     id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -65,6 +66,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2") // LiveData con coroutines
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.compose.runtime:runtime-livedata:1.5.3")
+    implementation("androidx.room:room-runtime:2.5.2") // Versión estable más reciente
+    implementation("androidx.room:room-ktx:2.5.2") //
+    kapt("androidx.room:room-compiler:2.5.2")
 
 
 }
