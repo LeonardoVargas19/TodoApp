@@ -40,7 +40,8 @@ import com.leoromeo.todoapp.addTask.ui.models.TaskData
 fun TaskScreen(taskViewModel: TaskViewModel) {
     val showDialog: Boolean by taskViewModel.showDialog.observeAsState(false)
     Box(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .padding(top = 60.dp)
     ) {
         AddTaskDialog(
@@ -133,7 +134,8 @@ fun AddTaskDialog(show: Boolean, onDismiss: () -> Unit, onTaskAdded: (String) ->
                 Spacer(modifier = Modifier.size(19.dp))
                 Button(
                     onClick = {
-                      onTaskAdded.invoke(myTask)
+                        onTaskAdded.invoke(myTask)
+                        myTask = ""
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {
