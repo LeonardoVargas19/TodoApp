@@ -1,9 +1,11 @@
 package com.leoromeo.todoapp.addTask.ui
 
 import android.util.Log
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.leoromeo.todoapp.addTask.ui.models.TaskData
 import javax.inject.Inject
 
 class TaskViewModel @Inject constructor() : ViewModel() {
@@ -11,16 +13,24 @@ class TaskViewModel @Inject constructor() : ViewModel() {
     private val _showDialog = MutableLiveData<Boolean>()
     var showDialog: LiveData<Boolean> = _showDialog
 
+    private val _task = mutableStateListOf<TaskData>()
+    val task: List<TaskData> = _task
+
+
     fun onDialogClose() {
         _showDialog.value = false
     }
 
     fun onTaskCreated(string: String) {
         _showDialog.value = false
-        Log.i("TAG", "Rei ayanami piloto del eva 001: $string")
+        _task.add(TaskData(task = string))
     }
 
     fun onShowDialog() {
         _showDialog.value = true
+    }
+
+    fun onCheckBoxSelected(data: TaskData) {
+
     }
 }
