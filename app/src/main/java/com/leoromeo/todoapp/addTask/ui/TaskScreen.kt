@@ -41,6 +41,7 @@ fun TaskScreen(taskViewModel: TaskViewModel) {
     val showDialog: Boolean by taskViewModel.showDialog.observeAsState(false)
     Box(
         modifier = Modifier.fillMaxSize()
+            .padding(top = 60.dp)
     ) {
         AddTaskDialog(
             showDialog,
@@ -132,7 +133,7 @@ fun AddTaskDialog(show: Boolean, onDismiss: () -> Unit, onTaskAdded: (String) ->
                 Spacer(modifier = Modifier.size(19.dp))
                 Button(
                     onClick = {
-                      onTaskAdded
+                      onTaskAdded.invoke(myTask)
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {

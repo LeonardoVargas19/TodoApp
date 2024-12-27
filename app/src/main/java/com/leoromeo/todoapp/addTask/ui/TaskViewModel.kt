@@ -21,9 +21,9 @@ class TaskViewModel @Inject constructor() : ViewModel() {
         _showDialog.value = false
     }
 
-    fun onTaskCreated(string: String) {
+    fun onTaskCreated(task: String) {
         _showDialog.value = false
-        _task.add(TaskData(task = string))
+        _task.add(TaskData(task = task))
     }
 
     fun onShowDialog() {
